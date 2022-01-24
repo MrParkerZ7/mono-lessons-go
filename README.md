@@ -1,6 +1,6 @@
 ## Go lang traning
 ##
-### Run general 
+### Run by general 
 ```bash
 Cd to lesson module then run "Go run main.go"
 ```
