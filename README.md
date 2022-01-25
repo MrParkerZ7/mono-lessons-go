@@ -12,3 +12,4 @@ Cd to lesson module then run "Go run main.go"
 - On VsCode right click on run.py then click "Run python file in terminal"
 * Require python3 and extension installed
 ```
+### [Documentation](https://go.dev/doc/)

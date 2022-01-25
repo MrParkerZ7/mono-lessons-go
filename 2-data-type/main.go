@@ -1,13 +1,29 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 	playString()
 	playNumber()
 	playBool()
+	playArray()
 }
 
+func playArray() {
+	var days [4]int = [4]int{1, 2, 3, 4}
+	var names = [2]string{"Puck", "Muck"}
+
+	fmt.Println("Array", days, names)
+	fmt.Println("Array len", len(days), len(names))
+
+	fmt.Println("Array slice", days[1:3], days[1:], days[:2])
+
+	names[0] = "Suck"
+	fmt.Println("Array append", append(names[:1], "Duck"), names)
+}
 func playBool() {
 	var isMe bool = true
 	isYou := true
@@ -37,8 +53,10 @@ func playString() {
 	textLateAssign = "newTextLateAssign"
 
 	fmt.Println("string", text, textAutoType, textLateAssign)
+	fmt.Println("strings.Contains", strings.Contains(textLateAssign, "new"))
+	fmt.Println("strings.ReplaceAll", strings.ReplaceAll(textLateAssign, "new", "ex"))
 
-	fmt.Printf("you %v me %v \n", 35, "You")
-	fmt.Printf("you %q me %v \n", 35, "You")
-	fmt.Printf("you %q me %v \n", "Puck", "You")
+	fmt.Printf("Printf you %v me %v \n", 35, "You")
+	fmt.Printf("Printf you %q me %v \n", 35, "You")
+	fmt.Printf("Printf you %q me %v \n", "Puck", "You")
 }
